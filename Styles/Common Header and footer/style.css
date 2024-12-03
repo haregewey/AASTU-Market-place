@@ -3,6 +3,7 @@
   margin: 0px;
   padding: 0;
   box-sizing: border-box;
+  /* border: 1px solid red; */
 }
 .heading {
   display: flex;
@@ -25,6 +26,10 @@
 }
 body {
   margin: 0;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 html,
 body {
@@ -144,8 +149,7 @@ footer {
   color: #f5f5f5;
   font-family: "Poppins", serif;
   font-weight: 400;
-  height: 22%;
-  margin-top: -16px;
+  height: max-content;
 }
 
 footer div {
