@@ -54,17 +54,16 @@
   font-weight: 600;
   margin-bottom: -10px;
   margin-top: -20px;
+  text-align: left;
 }
 .lastName {
   margin-top: 20px;
 }
 .section-2 {
   margin-top: -30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 90%;
   grid-column: 2;
-  height: 95%;
+  height: 105%;
   padding: 45px;
   gap: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -121,7 +120,7 @@ form {
   width: 100%;
 }
 .send-btn {
-  width: 21%;
+  width: 150px;
   height: 56px;
   margin-top: 10px;
   margin-left: 2.5%;
@@ -135,9 +134,13 @@ form {
   border-radius: 4px;
   border: none;
 }
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+}
 .cancel-btn {
   font-size: medium;
-  margin-left: 50%;
   font-weight: 600;
 }
 .send-btn:hover {
@@ -167,4 +170,83 @@ body.fade-out {
 a[href="/Account Settings/AccountSetting page.html"] img:hover {
   transform: scale(1.2);
   transition: transform 0.3s;
+}
+/* Media Query for contact us page */
+/* BreakPoint: 1015px */
+@media screen and (max-width: 1015px) {
+  .section-2 form span h2 {
+    color: #00a9e3;
+    font-weight: 600;
+    margin-bottom: -10px;
+    margin-top: -20px;
+    text-align: left;
+    font-size: 15px;
+    .section-2 {
+      height: 100%;
+    }
+    .send-btn {
+      width: 25%;
+      height: 56px;
+      margin-top: 10px;
+      margin-left: 2.5%;
+      background-color: #00a9e3;
+      color: white;
+      font-family: "Poppins", serif;
+      font-style: normal;
+      font-size: smaller;
+      letter-spacing: 0.4px;
+      font-weight: 400;
+      border-radius: 4px;
+      border: none;
+    }
+    .cancel-btn {
+      font-size: medium;
+      margin-left: 50%;
+      font-weight: 600;
+    }
+  }
+  @media screen and (max-width: 865px) {
+    .section-1 {
+      display: none;
+    }
+    .content-container {
+      /* overflow-y: auto; */
+      display: grid;
+      grid-template-columns: 1fr;
+      padding-top: 35px;
+      padding-right: 0px;
+    }
+    .section-2 {
+      margin-top: -30px;
+      width: 100%;
+      grid-column: 1;
+      height: 105%;
+      padding: 45px;
+      gap: 25px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    @media screen and (max-width: 460px) {
+      .section-2 form span {
+        display: block;
+        margin-top: 20px;
+        grid-row: 1;
+        gap: 10px;
+        font-family: "Poppins", serif;
+        font-style: normal;
+        font-size: smaller;
+        letter-spacing: 0.4px;
+        font-weight: 300;
+        border-radius: 4px;
+        gap: 20px;
+      }
+      .password-changes {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .password-changes div input {
+        width: 100%;
+      }
+    }
+  }
 }
