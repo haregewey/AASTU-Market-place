@@ -5,7 +5,7 @@
   width: 80%;
   height: max-content;
   display: grid;
-  gap: 30px;
+  gap: 100px;
   grid-template-columns: 1.5fr 3fr;
 }
 .section-1 {
@@ -63,7 +63,8 @@
   display: grid;
   grid-template-rows: 0.5fr 3fr;
   grid-column: 2;
-  height: 85%;
+  width: 90%;
+  height: 100%;
   padding: 35px;
   gap: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -108,7 +109,11 @@
   border: none;
 }
 .send-btn {
-  width: 21%;
+  display: flex;
+  justify-self: end;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
   height: 56px;
   margin-left: 79.3%;
   background-color: #00a9e3;
@@ -144,4 +149,81 @@ body.fade-out {
 a[href="/Account Settings/AccountSetting page.html"] img:hover {
   transform: scale(1.2);
   transition: transform 0.3s;
+}
+/* Media query for contact Us page */
+/* BreakPoint: 1400px */
+@media screen and (max-width: 1400px) {
+  .page-container {
+    gap: 10px;
+  }
+  .section-2 {
+    width: 100%;
+  }
+}
+/* BreakPoint: 1000px */
+@media screen and (max-width: 1000px) {
+  .page-container {
+    grid-template-columns: 1fr;
+  }
+  .section-1 {
+    grid-column: 1;
+    align-items: center;
+    height: max-content;
+    padding: 35px;
+    gap: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: "Poppins", serif;
+    font-style: normal;
+    font-size: smaller;
+  }
+  .section-2 {
+    display: grid;
+    grid-template-rows: 0.5fr 3fr;
+    grid-column: 1;
+    grid-row: 2;
+    height: 85%;
+    padding: 35px;
+    gap: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+@media screen and (max-width: 650px) {
+  .page-container {
+    grid-template-columns: 1fr;
+  }
+  .section-1 {
+    grid-column: 1;
+    align-items: center;
+    height: max-content;
+    padding: 35px;
+    gap: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: "Poppins", serif;
+    font-style: normal;
+    font-size: smaller;
+    width: 100%;
+  }
+  .section-2 {
+    display: grid;
+    grid-template-rows: 0.5fr 3fr;
+    grid-column: 1;
+    grid-row: 2;
+    height: 85%;
+    padding: 35px;
+    gap: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+  }
+  .section-2 span {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: 1;
+    gap: 10px;
+    font-family: "Poppins", serif;
+    font-style: normal;
+    font-size: smaller;
+    letter-spacing: 0.4px;
+    font-weight: 300;
+    border-radius: 4px;
+  }
 }
