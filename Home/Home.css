@@ -106,6 +106,12 @@ nav a:hover {
   height: 20px;
 }
 
+.plus-icon {
+  width: 20px;
+  height: 20px;
+  color: #555;
+}
+
 /* Navigation Layout */
 nav {
   margin-top: 20px;
@@ -144,66 +150,154 @@ nav {
   height: 2px;
   background-color: #f2f2f2;
 }
-
-/* --------------------------------------- Hero Section ------------------------------------------ */
-.hero {
+/* TRy */
+.container {
   display: flex;
-  flex-direction: row;
-  gap: 2em;
 }
 
-.sidebar-container {
-  border-right: 1px solid #333;
-  width: 15%;
+.sidebar {
+  width: 20%;
+  background-color: #f9f9f9;
+  padding: 20px;
 }
-.sidebar-container li {
-  min-width: 100%;
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
 }
+
+.sidebar ul li {
+  margin-bottom: 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 .banner {
+  width: 80%;
   background-color: #000;
   color: #fff;
-  width: 85%;
-  padding: 20px;
-  text-align: center;
-  margin-bottom: 50px;
-}
-.top-banner {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  padding: 20px;
 }
-.banner img {
+
+.banner-content {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.logo {
+  width: 30px;
+  vertical-align: middle;
+}
+
+.banner h2 {
+  margin: 10px 0;
+  font-size: 24px;
+}
+
+.discount {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.shop-now {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.shop-now:hover {
+  background-color: #ddd;
+}
+
+.banner-image {
+  width: 40%;
   max-width: 400px;
-  margin: 20px auto 0;
-  display: block;
-}
-
-.banner h1 {
-  font-size: 2.5em;
-  margin-top: 20px;
-}
-
-.banner p {
-  font-size: 1.2em;
-  margin-top: 20px;
 }
 
 .dots {
-  display: flex;
-  justify-content: center;
   margin-top: 20px;
 }
 
-.dot {
+.dots span {
+  display: inline-block;
   width: 10px;
   height: 10px;
-  background-color: #555;
+  background-color: #ccc;
   border-radius: 50%;
   margin: 0 5px;
 }
 
-.dot.active {
-  background-color: red;
+.dots .active {
+  background-color: #fff;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .sidebar {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+  .sidebar ul {
+    display: flex;
+    width: fit-content;
+    gap: 5px;
+  }
+  .sidebar ul li {
+    font-size: 14px;
+    margin-bottom: 10px;
+    background-color: #e9e7e7;
+    border-radius: 15px;
+    min-width: auto;
+  }
+
+  .banner {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .banner-content {
+    padding: 0;
+  }
+
+  .banner h2 {
+    font-size: 20px;
+  }
+
+  .discount {
+    font-size: 18px;
+  }
+
+  .banner-image {
+    width: 80%;
+    max-width: 200px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .shop-now {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .dots span {
+    width: 8px;
+    height: 8px;
+    margin: 0 3px;
+  }
 }
 
 /* --------------------------------------- Flash Sales ------------------------------------------ */
@@ -310,6 +404,7 @@ nav {
   justify-content: end;
   background-color: #fff;
   text-align: left;
+  margin-bottom: 50px;
 }
 
 .header-mini {
@@ -351,6 +446,7 @@ nav {
   font-size: 14px;
   cursor: pointer;
   transition: background-color 0.3s;
+  /* margin-top: 20px; */
 }
 
 .view-all-btn:hover {
@@ -383,6 +479,8 @@ nav {
   text-align: center;
   position: relative;
   padding: 5% 10%;
+  width: 90%;
+  margin-bottom: 50px;
 }
 
 .middle-banner {
@@ -391,9 +489,8 @@ nav {
   justify-content: space-around;
 }
 .banner-2 img {
+  width: 100%;
   max-width: 400px;
-  margin: 20px auto 0;
-  display: block;
 }
 
 .banner-2 h1 {
